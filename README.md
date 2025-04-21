@@ -1,5 +1,5 @@
 # EX01 Developing a Simple Webserver
-## Date:29/03/2025
+## Date:21/04/2025
 
 ## AIM:
 To develop a simple webserver to serve html pages and display the list of protocols in TCP/IP Protocol Suite.
@@ -40,7 +40,7 @@ Open a browser and navigate to http://127.0.0.1:8000 (or the assigned port).
 from http.server import HTTPServer, BaseHTTPRequestHandler
 content = """
 <html>
-    <title>DEVICE CONFIGURATION-212224040353</title>
+    <title>List of protocols in TCP/IP Protocol Suite-212224040353</title>
     <body>
         <style>
             body {
@@ -61,44 +61,34 @@ content = """
                 background-color: #f2f2f2;
             }
         </style>
-        <h1>DEVICE CONFIGURATION-212224040353</h1>
-        <table >
+        <h1>List of protocols in TCP/IP Protocol Suite-212224040353</h1>
+        <table>
             <tr>
-                <th>Device name:</th>
-                <td>DESKTOP-MOHHBTU</td>
+                <th>Layer</th>
+                <th>Protocol(s)</th>
+                <th>Description</th>
             </tr>
-            
             <tr>
-                <th>Processor:</th>
-                <td>D13th Gen Intel(R) Core(TM) i5-1335U 1.30 GHz</td>
+                <td>Application Layer</td>
+                <td>HTTP, FTP, SMTP, DNS, POP3, IMAP, Telnet</td>
+                <td>Provides network services directly to applications (e.g., web browsing, file transfer).</td>
             </tr>
-                         
             <tr>
-                <th>Installed RAM:</th>
-                <td>16.0 GB (15.7 GB usable) </td>
+                <td>Transport Layer</td>
+                <td>TCP, UDP</td>
+                <td>Ensures reliable (TCP) or unreliable (UDP) data transmission between devices.</td>
             </tr>
-                         
             <tr>
-                <th>Device ID:</th>
-                <td>15EEA3B2-7EF5-4DEC-903D-577382C3C005</td>
+                <td>Internet Layer</td>
+                <td>IP, ICMP, ARP</td>
+                <td>Responsible for logical addressing and routing of data across networks.</td>
             </tr>
-                            
             <tr>
-                <th>Product ID:</th>
-                <td>00342-42709-07393-AAOEM</td>
+                <td>Link Layer</td>
+                <td>Ethernet, Wi-Fi, PPP, ARP</td>
+                <td>Handles physical transmission of data over the network medium (Ethernet, Wi-Fi).</td>
             </tr>
-              
-            <tr>
-                <th>System type:</th>
-                <td>64-bit operating system, x64-based processor</td>
-            </td>
-                  
-            <tr>
-                <th>Pen and touch:</th>
-                <td>No pen or touch input is available for this display </td>
-            </tr>
-    
-          </table>  
+        </table>
     </body>
 </html>
 """
@@ -116,8 +106,7 @@ httpd.serve_forever()
 ```
 
 ## OUTPUT:
-![alt text](<Screenshot 2025-03-29 184430.png>)
-
-![alt text](<Screenshot 2025-03-29 184443.png>)
+![alt text](image.png)
+![alt text](<Screenshot 2025-04-21 091628.png>)
 ## RESULT:
 The program for implementing simple webserver is executed successfully.
